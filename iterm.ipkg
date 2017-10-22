@@ -1,0 +1,15 @@
+package iterm
+
+brief = "Simple tools to build interactive terminal applications."
+version = "0"
+readme = "readme.md"
+license = "BSD 3-Clause License"
+author = "Peter Ferenc Hajdu"
+maintainer = "Peter Ferenc Hajdu"
+homepage = "https://github.com/PeterHajdu/iterm"
+sourceloc = "https://github.com/PeterHajdu/iterm"
+
+modules = Terminal
+
+makefile = Makefile
+objs = terminal.o

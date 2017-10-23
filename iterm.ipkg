@@ -12,4 +12,4 @@ sourceloc = "https://github.com/PeterHajdu/iterm"
 modules = Terminal
 
 makefile = Makefile
-objs = terminal.o
+objs = terminal.o, terminal.h

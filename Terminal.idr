@@ -4,5 +4,5 @@ module Terminal
 %link C "terminal.o"
 
 public export
-set_raw : IO ()
-set_raw = foreign FFI_C "set_raw_terminal" (IO ())
+setRaw : IO ()
+setRaw = foreign FFI_C "set_raw_terminal" (IO ())

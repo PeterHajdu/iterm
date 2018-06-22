@@ -22,3 +22,12 @@ clearScreen = do
   putStrLn $ escapeString "[2J"
   moveCursor 0 0
 
+public export
+hideCursor : IO ()
+hideCursor = do
+  putStrLn $ escapeString "[?25l"
+
+public export
+showCursor : IO ()
+showCursor = do
+  putStrLn $ escapeString "[?25h"

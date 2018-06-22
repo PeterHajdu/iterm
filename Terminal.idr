@@ -12,7 +12,7 @@ escapeString : String -> String
 escapeString command = strCons '\ESC' command
 
 public export
-moveCursor : Int -> Int -> IO ()
+moveCursor : Nat -> Nat -> IO ()
 moveCursor x y = do
   putStrLn $ escapeString $ "[" ++ show y ++ ";" ++ show x ++ "H"
 

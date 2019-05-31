@@ -8,6 +8,14 @@ setRaw : IO ()
 setRaw = foreign FFI_C "set_raw_terminal" (IO ())
 
 public export
+getRows : IO Int
+getRows = foreign FFI_C "get_rows" (IO Int)
+
+public export
+getColumns : IO Int
+getColumns = foreign FFI_C "get_columns" (IO Int)
+
+public export
 escapeString : String -> String
 escapeString command = strCons '\ESC' command
 

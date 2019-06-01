@@ -5,4 +5,8 @@ terminal: terminal.o
 clean:
 	rm -f *.o *.ibc
 
-.PHONY: terminal
+pkg:
+	idris --build iterm.ipkg
+	idris --install iterm.ipkg
+
+.PHONY: terminal clean

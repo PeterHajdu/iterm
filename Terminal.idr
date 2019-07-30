@@ -49,3 +49,44 @@ export
 showCursor : IO ()
 showCursor = do
   putStrLn $ escapeString "[?25h"
+
+public export
+data Colour : Type where
+  Black : Colour
+  Red : Colour
+  Green : Colour
+  Yellow : Colour
+  Blue : Colour
+  Magenta : Colour
+  Cyan : Colour
+  White : Colour
+  BrightBlack : Colour
+  BrightRed : Colour
+  BrightGreen : Colour
+  BrightYellow : Colour
+  BrightBlue : Colour
+  BrightMagenta : Colour
+  BrightCyan : Colour
+  BrightWhite : Colour
+
+colourCode : Colour -> String
+colourCode Black = "[30m"
+colourCode Red = "[31m"
+colourCode Green = "[32m"
+colourCode Yellow = "[33m"
+colourCode Blue = "[34m"
+colourCode Magenta = "[35m"
+colourCode Cyan = "[36m"
+colourCode White = "[37m"
+colourCode BrightBlack = "[90m"
+colourCode BrightRed = "[91m"
+colourCode BrightGreen = "[92m"
+colourCode BrightYellow = "[93m"
+colourCode BrightBlue = "[94m"
+colourCode BrightMagenta = "[95m"
+colourCode BrightCyan = "[96m"
+colourCode BrightWhite = "[97m"
+
+export
+setColour : Colour -> IO ()
+setColour = putStr . escapeString . colourCode
